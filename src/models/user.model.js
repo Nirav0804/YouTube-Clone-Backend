@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
 
 const userSchema = new Schema({
-    userName: {
+    username: {
         type: String,
         required: true,
         unique: true,
@@ -32,7 +32,7 @@ const userSchema = new Schema({
         type: String // Cloudinary URL
     },
     watchHistory: [{
-        types: Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: "Video"
     }],
     password: {
